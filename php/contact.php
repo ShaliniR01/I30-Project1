@@ -5,7 +5,7 @@ $password="";
 $dbname="portfolio";
 
 $uname = $_POST['name'];
-$email = $_POST['email'];
+$email = $_POST['email']; 
 $msg = $_POST['message'];
 
 $conn=mysqli_connect($servername, $username, $password,$dbname);
