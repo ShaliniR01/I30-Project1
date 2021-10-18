@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PORTFOLIO-CONTACT</title>
+    <meta charset="utf-8">
+<link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+ <!-- navigation bar -->
+    <nav>
+      <div class="logo">TEAM</div>
+      <input type="checkbox" id="click">
+      <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+<!-- contact -->
+    <div class="contact" id="contact">
+        <div class="container">
+          <center><p class="cont-text">--CONTACT US-- </p></center>
+          <div class="content">
+
+            <div class="left-side">
+              <div class="address details">
+                <i class="fas fa-user"></i>
+                <div class="topic">Address</div>
+                <div class="text">Coimbatore</div>
+                </div>
+              <div class="phone details">
+                <i class="fas fa-phone-alt"></i>
+                <div class="topic">Phone</div>
+                <div class="text">9876543210</div>
+                </div>
+              <div class="email details">
+                <i class="fas fa-envelope"></i>
+                <div class="topic">Email</div>
+                <div class="text">abc@gmail.com</div>
+                </div>
+            </div>
+            <div class="right-side">
+              <div class="topic-text">Send us a message</div>
+              <form method="POST" action="php/contact.php">
+                <input type="text" name="name" placeholder="Enter Name" onfocus="this.value=''" required>
+                <input type="email" name="email" placeholder="Enter Email Id" onfocus="this.value=''" required>
+                <input type="text" name="message" placeholder="Enter Message" onfocus="this.value=''" required>
+                <center><input type="submit"  name="btn" value="SEND"></center>
+            </form>
+          </div>
+          </div>
+        </div></div>
+  </body>
+</html>
