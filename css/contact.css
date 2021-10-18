@@ -31,7 +31,7 @@
   justify-content: center;
   margin-top: 15px;
   position: relative;
-}
+} 
 .content .left-side::before{
   content: '';
   position: absolute;
