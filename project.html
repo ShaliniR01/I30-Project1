@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/project.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <!-- navigation bar -->
+    <nav>
+        <div class="logo">TEAM</div>
+        <input type="checkbox" id="click">
+        <label for="click" class="menu-btn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    <div class="row">
+        <center><div class="title"><h2>OUR PROJECTS</h2></div></center>
+        <div class="column">
+          <div class="card">
+            <img src="image/project.svg" alt="Avatar" style="width:200px;height:180px;padding-top: 20px;">
+            <h3>PROJECT NAME</h3>
+            <button class="myBtn_multi">DETAILS</button>
+          </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <img src="image/project.svg" alt="Avatar" style="width:200px;height:180px;padding-top: 20px;">
+                <h3>PROJECT NAME</h3>
+              <button class="myBtn_multi">DETAILS</button>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+                <img src="image/project.svg" alt="Avatar" style="width:200px;height:180px;padding-top: 20px;">
+                <h3>PROJECT NAME</h3>
+              <button class="myBtn_multi">DETAILS</button>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="card">
+                <img src="image/project.svg" alt="Avatar" style="width:200px;height:180px;padding-top: 20px;">
+                <h3>PROJECT NAME</h3>
+              <button class="myBtn_multi">DETAILS</button>
+            </div>
+          </div>
+        </div>
+    <!-- The Modal -->
+    <div class="modal modal_multi">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close close_multi">×</span>
+            <center><img src="image/project.svg" alt="Avatar" style="width:700px;height:300px;padding: 40px;"></center>
+            <div class="project"><p>PROJECT NAME:<br>DESCRPITION:<br>DOMAIN:<br>LINK:<br></p></div>
+        </div>
+    </div>
+    <!-- The Modal -->
+    <div  class="modal modal_multi">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close close_multi">×</span>
+            <center><img src="image/project.svg" alt="Avatar" style="width:700px;height:300px;padding: 40px;"></center>
+            <div class="project"><p>PROJECT NAME:<br>DESCRPITION:<br>DOMAIN:<br>LINK:<br></p></div>
+        </div>
+    </div>
+        <!-- The Modal -->
+        <div class="modal modal_multi">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close close_multi">×</span>
+                <center><img src="image/project.svg" alt="Avatar" style="width:700px;height:300px;padding: 40px;"></center>
+            <div class="project"><p>PROJECT NAME:<br>DESCRPITION:<br>DOMAIN:<br>LINK:<br></p></div>
+            </div>
+        </div>
+        <!-- The Modal -->
+        <div  class="modal modal_multi">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close close_multi">×</span>
+                <center><img src="image/project.svg" alt="Avatar" style="width:700px;height:300px;padding: 40px;"></center>
+            <div class="project"><p>PROJECT NAME:<br>DESCRPITION:<br>DOMAIN:<br>LINK:<br></p></div>
+            </div>
+        </div>
+    <script>
+        var modalparent = document.getElementsByClassName("modal_multi");
+        var modal_btn_multi = document.getElementsByClassName("myBtn_multi");
+        var span_close_multi = document.getElementsByClassName("close_multi");
+        function setDataIndex() {
+        for (i = 0; i < modal_btn_multi.length; i++)
+        {
+            modal_btn_multi[i].setAttribute('data-index', i);
+            modalparent[i].setAttribute('data-index', i);
+            span_close_multi[i].setAttribute('data-index', i);
+        }
+        }
+        for (i = 0; i < modal_btn_multi.length; i++)
+        {
+            modal_btn_multi[i].onclick = function() {
+            var ElementIndex = this.getAttribute('data-index');
+            modalparent[ElementIndex].style.display = "block";
+        };
+        span_close_multi[i].onclick = function() {
+        var ElementIndex = this.getAttribute('data-index');
+        modalparent[ElementIndex].style.display = "none";
+        };
+        }
+        window.onload = function() {
+            setDataIndex();
+        };
+        window.onclick = function(event) {
+            if (event.target === modalparent[event.target.getAttribute('data-index')]) {
+                modalparent[event.target.getAttribute('data-index')].style.display = "none";
+            }
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        };
+        var modal = document.getElementById('myModal');
+        var btn = document.getElementById("myBtn");
+        var span = modal.getElementsByClassName("close")[0]; // Modified by dsones uk
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>
