@@ -134,3 +134,11 @@ section{
       opacity: 1;
   }
 }
+@media screen and (max-width: 1400px) {
+  .img {
+    align-items: center;
+    width: 0%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
