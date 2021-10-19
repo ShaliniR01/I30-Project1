@@ -76,10 +76,12 @@ input[type="checkbox"]{
   nav ul li{
     width: 100%;
     margin: 45px 0;
+
   }
 
   #click:checked ~ ul li a{
     margin-left: 0px;
+    color:red;
   }
   nav ul li a:hover{
     background: rgb(119, 247, 198);
